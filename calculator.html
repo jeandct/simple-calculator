@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let name = prompt("Enter your name");
+        const random = Math.floor(Math.random()*100) + 1;
+        console.log(random);
+
+        let success = true;
+
+        let tentative;
+        while(success){
+            let tentative = parseInt(prompt("Enter a number between 1 and 100"),10);
+
+            if(tentative > random){
+                console.log("It is less");
+            }
+
+            else if(tentative < random){
+                console.log("It is more");
+            }
+
+            else if(tentative === random){
+                success = false;
+                console.log(`${name} wins !`);
+            }
+
+            else if(isNaN(tentative)){
+                console.log("Enter a number !!")
+            }
+
+        }
+
+
+
+    </script>
+</body>
+</html>
