@@ -1,68 +1,30 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-    <body>
-        <script>
-        
-            let firstValue = parseInt(prompt("Enter a 1st number"),10),
-                operator = prompt("Select an operator"),
-                secondValue = parseInt(prompt("Enter a 2nd number"),10);
-            
-            
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <h2 id="error"></h1>
+    <form>
+        <label for="firstNumber"></label>
+        <input type="number" id="firstNumber">
+        <label for="operator"></label>
+        <select name="operator" id="operator">
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="%">%</option>
+        </select>
+        <label for="secondNumber"></label>
+        <input type="number" id="secondNumber">
+        <button id="calculateBtn">Calculate !</button>
+    </form>
+    <p id="result">Résultat : </p>
 
-            // function calculator(){
-            //     let result;
-            //     if(operator === "+"){
-            //         result = firstValue + secondValue;
-            //     }
-            //     else if(operator === "-"){
-            //         result = firstValue - secondValue;
-            //     }
-            //     else if(operator === "*"){
-            //         result = firstValue * secondValue;
-            //     }
-            //     else if(operator === "/"){
-            //         result = firstValue / secondValue;
-            //     }
-            //     else if(operator === "%"){
-            //         result = firstValue % secondValue;
-            //     }
-            //     else{
-            //         console.log("Loupé")
-            //     }
-            //     console.log(result)
-            // }
-        
-            // calculator();
-            function calculator(){
-                let result;
-                switch(operator){
-                    case "+" :
-                        result = firstValue + secondValue;
-                        break; 
-                    case "-" :
-                        result = firstValue - secondValue;
-                        break; 
-                    case "/" :
-                        result = firstValue / secondValue;
-                        break;
-                    case "*":
-                        result = firstValue * secondValue;
-                        break; 
-                    case "%" :
-                        result = firstValue % secondValue;
-                        break; 
-                    default: console.log("Invalid operator");
-                }
-                console.log(result) 
-                }
-            calculator();
-
-
-        </script>
-    </body>
+    <script src="./script.js"></script>
+</body>
 </html>
