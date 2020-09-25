@@ -22,7 +22,7 @@
 //    }
 //calculator();
 
-let myBtn = document.getElementById("calculateBtn");
+const myBtn = document.getElementById("calculateBtn");
 let myResult = document.getElementById("result")
 
 myBtn.addEventListener("click", calculate)
